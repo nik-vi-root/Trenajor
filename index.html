@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>JS Master Trainer</title>
+</head>
+<body>
+
+  <h2>DOM Тренажер</h2>
+
+  <!-- ЕДИНСТВЕННАЯ панель управления -->
+  <!-- <div class="control-panel">
+    <input type="text" id="newTaskInput" placeholder="Добавь фразу или код...">
+
+    <button id="addBtn" class="action-btn" title="Добавить">+</button>
+    <button id="removeBtn" class="action-btn" title="Удалить">-</button>
+    <button id="themeBtn" class="action-btn" style="width: 40px;" title="Сменить тему">🎨</button>
+    
+  </div> -->
+
+<!-- ЕДИНСТВЕННАЯ панель управления -->
+  <div class="control-panel">
+    <input type="text" id="newTaskInput" placeholder="Добавь фразу или код...">
+
+    <button id="addBtn" class="action-btn" title="Добавить">+</button>
+    <button id="removeBtn" class="action-btn" title="Удалить">-</button>
+    <button id="saveBtn" class="action-btn" title="Сохранить">💾</button>
+    <button id="themeBtn" class="action-btn" style="width: 40px;" title="Сменить тему">🎨</button>
+  </div>
+
+  <!-- Панель для кнопок-заданий -->
+  <div class="btn-panel" id="btnPanel"></div>
+
+  <!-- Блок с заданием -->
+  <div id="target"></div>
+  
+  <!-- Поле ввода -->
+  <input type="text" id="mainInput" class="main-input" placeholder="Печатай код..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
+  
+  <!-- ОПИСАНИЕ (под полем ввода) -->
+  <div id="descriptionBox"></div>
+
+  <!-- Статус -->
+  <div id="status">Успешно: 0/10</div>
+
+<script src="./script/script.js"></script>
+</body>
+</html>

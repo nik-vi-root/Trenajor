@@ -1,0 +1,142 @@
+ body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a0a0a 0%, #2a0845 50%, #b11d73 100%);
+      color: #fff;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      transition: background 0.3s ease;
+    }
+
+    /* Класс для "мужской" темы */
+    body.theme-blue {
+      background: linear-gradient(135deg, #0a0a0a 0%, #12092a 50%, #1d4ed8 100%);
+    }
+
+    h2 { margin-bottom: 20px; text-align: center; }
+
+    /* Панель добавления новых слов */
+    .control-panel {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+
+    .control-panel input {
+      flex-grow: 1;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .control-panel input:focus { border-color: #6441A5; }
+
+    .action-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      font-size: 1.5em;
+      width: 40px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .action-btn:hover { background: rgba(255, 255, 255, 0.2); }
+    .action-btn:active { transform: scale(0.9); }
+
+    /* Панель с кнопками-переключателями */
+    .btn-panel {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 1400px;
+      
+      /* ИНЖЕНЕРНАЯ ХИТРОСТЬ: Чтобы 16 кнопок не сломали экран на телефоне */
+      max-height: 120px; 
+      overflow-y: auto; 
+      padding: 5px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+
+    .task-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: 0.3s;
+    }
+
+    .task-btn.active {
+      background: rgba(255, 101, 189, 0.3);
+      border-color: #ff65bd;
+      box-shadow: 0 0 10px rgba(255, 101, 189, 0.5);
+    }
+
+    #target {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #ffe6ff;
+      margin: 10px 0 20px 0;
+      text-shadow: 0 0 5px #ff65bd;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 350px;
+      word-break: break-all;
+    }
+
+    .main-input {
+      padding: 12px;
+      width: 100%;
+      max-width: 350px;
+      font-size: 1.1em;
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #6441A5;
+      color: #fff;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .main-input:focus { border-color: #ff65bd; }
+
+    /* НОВЫЙ БЛОК: Описание под инпутом */
+    #descriptionBox {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.4);
+      border-left: 4px solid #ff65bd;
+      color: #cbd5e1;
+      font-style: italic;
+      font-size: 0.95em;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 350px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    #status { margin-top: 20px; font-size: 1.2em; text-align: center; }
+    .success { color: #4ade80; text-shadow: 0 0 5px #4ade80; }
+    .error { color: #f87171; text-shadow: 0 0 5px #f87171; }
